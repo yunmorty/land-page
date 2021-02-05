@@ -8,7 +8,6 @@
     &-wrap
         display: flex;
         align-items: center;
-        min-height: 80px;
         justify-content: space-between
    
 
@@ -38,7 +37,7 @@
     width: 100%
     background-color: $primary
     color: #ffffff
-    transform: translateY(0%)
+    transform: translateY(-200%)
     transition: 0.2s
     &__link
         text-decoration: none
@@ -84,10 +83,21 @@
         display: block
         font-size: 14px 
         color: $text-color-light
-        
-
-
-        
+@media   (max-width: 991px)
+    .navbar
+        &__mobile, &__landline
+            display: none
+@media   (max-width: 576px)
+    .logo
+        display: none
+    .menu 
+        top: 60px
+        &-button
+            height: 60px
+        &__nav
+            flex-direction: column
+        &__link
+            margin-bottom: 20px
         
         
         
