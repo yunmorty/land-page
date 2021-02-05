@@ -127,6 +127,7 @@ body {
           transform: translateY(-200%);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  opacity: 0;
 }
 
 .menu__link {
@@ -151,6 +152,7 @@ body {
 .menu_active {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+  opacity: 1;
 }
 
 .menu-button {
@@ -225,10 +227,11 @@ body {
 }
 
 .hero {
-  background: #f1f1f1 url("../img/hero/banner_background.jpg") no-repeat center top 80px;
-  background-size: contain;
-  padding-top: 180px;
+  background: #f1f1f1 url("../img/hero/banner_background.jpg") no-repeat center top;
+  background-size: cover;
+  padding-top: 120px;
   padding-bottom: 270px;
+  margin-top: 100px;
 }
 
 .hero__title {
