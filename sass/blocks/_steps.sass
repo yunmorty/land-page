@@ -1,0 +1,50 @@
+.step
+    position: relative;
+    text-align: center;
+
+    &__title
+        font-size: 18px
+    &:before
+        content: ''
+        width: 80%;
+        height: 2px;
+        background-color: black;
+        display: block;
+        top: 93px;
+        right: 10%;
+        position: absolute;
+        
+         
+
+    &__text
+        max-width: 160px
+        margin: auto
+        margin-bottom: 30px;
+    &s
+        background-color: #f1f1f1;
+        &-block
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap
+    &__img
+        width: 80px;
+        height: 80px;
+
+@media   (max-width: 991px)
+    .step
+        width: 33%;
+        &:before
+            display: flex;
+@media   (max-width: 768px)
+    .step
+        width: 100%; 
+        &:before
+                content: ''
+                width: 60%;
+                height: 2px;
+                background-color: black;
+                display: block;
+                top: 93px;
+                right: 20%;
+                position: absolute;     
+                    
