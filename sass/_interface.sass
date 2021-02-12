@@ -45,12 +45,55 @@ body
         
 .bg-secondary
     background: $bg-secondary
-
-.checkbox
-    display: none
+.input
+    height: 80px;
+    padding-left: 30px;
+    border: 1px solid #dddddd
+input[type="checkbox"]
+    display: none;
     &:checked + label:before
         background-color: $primary;
+.select
+    height: 80px;
+    border: 1px solid #dddddd
+    width: 100%;
+    position: relative;
+    &:after
+        content: ''
+        z-index: 9;
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-size: 100%
+        background: url('../img/download.png') no-repeat center
+    &:hover
+        cursor: pointer;
+                           
+    &_checked
+        line-height: 80px;
+        padding-left: 30px;
+    &__dropdown
+        position: absolute
+        top: 80px;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #dddddd
+        margin: 0px;
+        list-style: none;
+        padding: 0
+        display: none;
+        &_open
+            display: block; 
+    &__option
+        padding: 20px
+        &:hover
+            background-color: $bg-secondary;
+        
 
+.checkbox
     &-label
         display: flex;
         align-items: center;

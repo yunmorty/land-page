@@ -13,7 +13,7 @@
     <header class="header">
         
         <div class="menu">
-            <div class="menu-wrap">
+            <div class="container">
                 <nav class="menu__nav">
                     <a href="#" class="menu__link">Lorem</a>
                     <a href="#" class="menu__link">Lorem</a>
@@ -23,7 +23,7 @@
                     <a href="#" class="menu__link">Lorem</a>
                 </nav> 
             </div>
-        </div>
+        </div> 
 
         <div class="navbar">
             <div class="container">
@@ -46,7 +46,7 @@
                         <a class="navbar__phone" href="tel:8(800)700-06-11">8(800)700-06-11</a>
                         <a class="navbar__email" href="mailto:info@mail.ru">info@mail.ru</a>
                     </div>
-                    <button class="button-o navbar__button">Получить консультацию</button> 
+                    <a href="#offer" class="button-o navbar__button">Получить консультацию</a> 
                     <!-- /.button-o navbar__button --> 
                 </div>
                 <!-- /.navbar-wrap -->
@@ -60,7 +60,7 @@
                     Lorem <br>ipsum dolor sit<br> amet consectetur adipisicing.
                 </h1>
                 <span class="hero__subtitle">Lorem ipsum dolor sit amet.</span>
-                <button class="button hero__button">Lorem, ipsum dolor.</button>
+                <a href="#offer" class="button hero__button">Lorem, ipsum dolor.</a href="#offer">
             </div>
             <!-- /.container -->
         </div>
@@ -69,7 +69,7 @@
     <!-- /.header -->
     
     <main>
-        <section class="offer bg-secondary">
+        <section class="offer bg-secondary" id="offer">
             <div class="container">
                 <div class="offer__block offer-block offer-block_calc-bg">
                     <h2 class="offer__title">Lorem ipsum dolor sit amet.</h2>
@@ -79,7 +79,14 @@
                         <div class="form__row">
                             <div class="form__group">    
                                 <label for="" class="form__label">Lorem.</label>
-                                <input type="text" class="input form__input">
+                                <input type="hidden" name="type" id="select-type" value="С печатью">
+                                <div class="select form__select">
+                                    <div class="select_checked">GLorem</div>
+                                    <ul class="select__dropdown">
+                                        <li class="select__option" data-value="lorem">lorem</li>
+                                        <li class="select__option" data-value="fffflorem">fffflorem</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form__group">                               
                                 <label for="" class="form__label">Lorem.</label>
@@ -658,7 +665,7 @@
                             </div>
                             <div class="form__group">                               
                                 
-                                <input type="text" class="input form__input" placeholder="your name">
+                                <input type="tel" class="input form__input" placeholder="your tel">
                             </div>
                             <div class="form__group">
                                 
@@ -810,22 +817,8 @@
     <script src="js/jquery.event.move.js"></script>
     <script src="js/jquery.twentytwenty.js"></script>
     <script src="js/slick.min.js"></script>
-    <script>
-        $(window).load(function() {
-            $(".before-after").twentytwenty({
-                before_label: 'before', // Set a custom before label
-                after_label: 'after', // Set a custom after label
-            });
-            $('.before-slider').slick({
-                draggable: false,
-                dots: true,
-                dotsClass: 'before-slider__dots',
-                prevArrow: $('.arrow-left'),
-                nextArrow: $('.arrow-right')
-
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
 <!-- Виджет обратной связи  -->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=5364"></script>
 </body>
